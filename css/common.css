@@ -70,6 +70,8 @@ button {
 body {
     font: 1.6rem/1.7 "Montserrat", sans-serif;
     color: var(--text-color);
+    text-transform: capitalize; /* ttc : 첫글자를 대문자로 */
+    word-break: keep-all; /* wbka : 어절단위 줄바꿈 */
 }
 
 .btn {
@@ -87,4 +89,21 @@ body {
 .btn-black {
     background: #000;
     color: #fff;
+}
+
+.text-gra {
+    /* 텍스트에 그라데이션 적용 */
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* 블록일 때는 전체 다 적용돼서 짧은 글씨는 그라데이션이 적용이 잘 안되는데 
+ 인라인블록으로하면 글씨에 맞게 배경이 정해짐 */
+    display: inline-block;
+}
+
+.sec-title {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.2;
 }
